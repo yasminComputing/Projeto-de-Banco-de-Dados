@@ -1,0 +1,58 @@
+Atleta
+1, Pedro
+2, Maria
+3, Yasmin
+4, Rafael
+5, Daniel
+
+ 
+
+Modalidade
+500, Beach Tennis
+501, Padel
+502, Volei de Areia
+
+ 
+
+Clube
+100, Star Padel
+101, Fair Play
+102, Elite
+103, 8000 Sports
+104, Pier Beach Tennis
+
+ 
+
+Treinador
+1000, Lucas, 100
+1001, Pato, 102
+1002, Jader, 103
+1003, Enrico, 104
+
+ 
+
+ModalidadeTreinador
+500, 1002
+500, 1003
+501, 1000
+501, 1001
+
+ 
+
+AtletaModalidade
+1, 500
+1, 501
+2, 500
+3, 502
+4, 502
+
+ 
+
+ModalidadeClube
+500, 100
+500, 101
+500, 103
+500, 104
+501, 100
+501, 101
+501, 102
