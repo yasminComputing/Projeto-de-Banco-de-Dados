@@ -28,5 +28,97 @@ Exemplo:
        --  Usando ** ordem descrescente (DESC)** organiza do maior para o menor ( 10 a 1) ou Z a A.
 
 
+-- Outros operadores
+#Operador                  significado
+
+#between  ...  and ...     entre dois valores ( inclusive )
+#in ( .... )               lista de valores
+#like                      com um padrao de caracteres
+#is null                   é um valor nulo
+
+** Exemplo BETWEEN:  valores entre determinados valores 
+            select Empregado.nome, Empregado.salario
+            from Empregado
+            where Empregado.salario BETWEEN 1000 AND 1500;
+OBS.: esse comando têm que exibir os salários entre os valores de 1000 e 1500. 
+
+** Exemplo IN: IN: Inclui os registros da lista.
+OBS.: 
+       NOT IN: Exclui os registros da lista, trazendo tudo o que for diferente dos valores informados.
+        Texto: Valores de texto devem ser colocados entre aspas simples ('valor').
+        Números: Valores numéricos não precisam de aspas.
+        NULL: Cuidado ao usar NOT IN com valores NULL, pois isso pode retornar resultados inesperados (vazios).
+
+    select Empregado.nome, Empregado.Departamendo_idDepartamento
+    from Empregado
+    where Empregado.Departamento_idDepartamento IN ( 3, 5)
+
+** Exemplo LIKE: 
+    'texto%' (Começa com): Encontra registros que iniciam com o texto especificado.
+        Exemplo: WHERE nome LIKE 'A%' (Nomes que começam com 'A').
+    '%texto' (Termina com): Encontra registros que terminam com o texto especificado.
+        Exemplo: WHERE email LIKE '%.com' (Emails que terminam com '.com').
+    '%texto%' (Contém): Encontra registros que contêm o texto em qualquer posição.
+        Exemplo: WHERE produto LIKE '%phone%' (Produtos que tenham 'phone' no nome).
+     '_'  (Um caractere): Encontra registros onde uma posição específica é um caractere genérico.
+        Exemplo: WHERE codigo LIKE 'A_C' (Começa com 'A', termina com 'C' e tem um caractere no meio).
+
+** Exemplo IS NULL: mostrar o campo que é nulo 
+            select Empregado.nome, Empregado.funcao
+            from Empregado
+            where Empregado.comissao IS NULL 
+
+--  Operadores Negativos -- 
+
+#operador               descrição
+
+#<>                     diferente
+#not nome_coluna =      diferente da coluna
+#not nome_coluna >      não maior que
+#not between            não entre dois valores informados
+#not in                 não existente numa dada lista de valores
+#not like               diferente do padrao de caracteres informado
+#is not null            não é um valor nulo
+
+# Operadores  "AND" (E) e  "OR" (OU)
+        SELECT Empregado.nome, Empregado.salario, Empregado.funcao
+        FROM  Empregado
+        WHERE  Empregado.salario  BETWEEN  3400 AND 5000
+        AND  Empregado.funcao =  'balconista';
+
+
+# Funções de Caracteres
+
+#Lower - 		força caracteres maiúsculos aparecerem em minúsculos.
+#Upper - 		força caracteres minúsculos aparecerem em maiúsculos.
+#Concat(x,y)- 		concatena a string "x" com a string "y".
+#Substring(x,y,str)- 	extrai um substring da string "str", começando em "x", e termina em "y".
+#To_Char(num)- 		converte um valor numérico para  uma string de caracteres.
+#To_Date(char,fmt)- 	converte uma string caracter em uma data.
+
+** Exemplo lower: 
+                    select LOWER (Empregado.nome)
+                    from Empregado. 
+
+
+# Funções Agregadas (ou de Agrupamento)
+
+#função        retorno
+
+#avg(n)        média do valor n, ignorando nulos
+#count(expr)   vezes que o número da expr avalia para algo nao nulo
+#max(expr)     maior valor da expr
+#min(expr)     menor valor da expr
+#sum(n)	       soma dos valores de n, ignorando nulos
+
+** Exemplos: Apresenta a média de comissão pagos por departamento.
+            SELECT  AVG(Empregado.comissao)  FROM  Empregado;
+            SELECT  MIN(Empregado.comissao)  FROM  Empregado;
+            SELECT  MAX(Empregado.comissao)  FROM Empregado;
+            SELECT  SUM(Empregado.comissao) FROM  Empregado;
+
+                    
+            
+
 
 
