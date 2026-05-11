@@ -1,0 +1,32 @@
+** Anotações Aula 11.05.2026 ** 
+
+--  Comando usando SELECT
+
+- SELECT para todos os campos da tabela
+
+    select  * from Departamento;
+
+- Uso do WHERE + operadores lógicos
+
+    # = igual a 
+    # > maior que 
+    # < menor que
+    # <= menor que ou igual Anotações
+
+- Para monstrar todos os cargos existentes na empresa, porém omite eventuais duplicidade usando 
+** distinct ** que serve para eliminar duplicidade e retornar apenas valores únicos de uma ou mais colunas. 
+        select distinct Empregado.funcao
+        from Empregado; 
+- Apresentar os nomes e funções de cada funcionário contidos na tabela empregado, porém classificados alfabeticamento (A...Z).
+Exemplo: 
+              select Empregado.nome "Nome do Empregado", Empregado.funcao "Cargo"
+              from Empregado
+              order by Empregado.nome
+- O uso do ** order by **  é utilizado para classificar o conjunto de resultados de uma consulta em ordem crescente ou decrescente. 
+
+       --  Para organizar por ** ordem ascendente usar (ASC) ** organiza do menor para maior ( 1 a 10) ou A a Z).SELECT * FROM PRODUTOS BY NOME ASC. 
+       --  Usando ** ordem descrescente (DESC)** organiza do maior para o menor ( 10 a 1) ou Z a A.
+
+
+
+
