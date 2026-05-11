@@ -120,6 +120,9 @@ OBS.:
 -- CREATE VIEW no SQL: é utilizado para criar uma tabela virtual baseada no resultado de uma consulta SELECT. Ela não armazena dados
 fisicamente (na maioria dos casos), funcionando como uma consulta pré-definida que simplifica acessos complexos, melhora a segurança e
 abstrai dados, permitindo consultar a view como se fosse uma tabela real.
+
+-- AS no SQL:  serve para criar um alias (um apelido temporário) para uma coluna ou para uma tabela dentro de uma consulta.
+Ele não altera o nome real no banco de dados,apenas muda como o resultado é exibido ou referenciado naquela execução.
             
 
 
