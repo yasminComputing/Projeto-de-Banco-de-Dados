@@ -117,7 +117,9 @@ OBS.:
             SELECT  MAX(Empregado.comissao)  FROM Empregado;
             SELECT  SUM(Empregado.comissao) FROM  Empregado;
 
-                    
+-- CREATE VIEW no SQL: é utilizado para criar uma tabela virtual baseada no resultado de uma consulta SELECT. Ela não armazena dados
+fisicamente (na maioria dos casos), funcionando como uma consulta pré-definida que simplifica acessos complexos, melhora a segurança e
+abstrai dados, permitindo consultar a view como se fosse uma tabela real.
             
 
 
